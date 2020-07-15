@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/fragmentMapa">
+    <fragment
+        android:id="@+id/fragmentMapa"
+        android:name="com.example.proyectomaster.fragments.FragmentMapa"
+        android:label="fragment_mapa"
+        tools:layout="@layout/fragment_mapa" />
+    <fragment
+        android:id="@+id/fragmentPerfil"
+        android:name="com.example.proyectomaster.fragments.FragmentPerfil"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_fragmentPerfil_to_fragmentSaberMas"
+            app:destination="@id/fragmentSaberMas" />
+        <action
+            android:id="@+id/action_fragmentPerfil_to_fragmentContacto"
+            app:destination="@id/fragmentContacto" />
+        <action
+            android:id="@+id/action_fragmentPerfil_to_fragmentInstructivos"
+            app:destination="@id/fragmentInstructivos" />
+        <action
+            android:id="@+id/action_fragmentPerfil_to_fragmentJuegos"
+            app:destination="@id/fragmentJuegos" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNoticias"
+        android:name="com.example.proyectomaster.fragments.FragmentNoticias"
+        android:label="fragment_noticias"
+        tools:layout="@layout/fragment_noticias" />
+    <fragment
+        android:id="@+id/fragmentContacto"
+        android:name="com.example.proyectomaster.fragments.FragmentContacto"
+        android:label="fragment_contacto"
+        tools:layout="@layout/fragment_contacto" />
+    <fragment
+        android:id="@+id/fragmentInstructivos"
+        android:name="com.example.proyectomaster.fragments.FragmentInstructivos"
+        android:label="fragment_instructivos"
+        tools:layout="@layout/fragment_instructivos" />
+    <fragment
+        android:id="@+id/fragmentJuegos"
+        android:name="com.example.proyectomaster.fragments.FragmentJuegos"
+        android:label="fragment_juegos"
+        tools:layout="@layout/fragment_juegos" />
+    <fragment
+        android:id="@+id/fragmentSaberMas"
+        android:name="com.example.proyectomaster.fragments.FragmentSaberMas"
+        android:label="fragment_saber_mas"
+        tools:layout="@layout/fragment_saber_mas" />
+    <fragment
+        android:id="@+id/listFragmentNoticias"
+        android:name="com.example.proyectomaster.fragments.listFragmentNoticias"
+        android:label="fragment_list_noticias"
+        tools:layout="@layout/fragment_list_noticias" >
+        <action
+            android:id="@+id/action_listFragmentNoticias2_to_fragmentNoticias"
+            app:destination="@id/fragmentNoticias" />
+    </fragment>
+</navigation>

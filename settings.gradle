@@ -1,0 +1,2 @@
+rootProject.name='ProyectoMaster'
+include ':app'
