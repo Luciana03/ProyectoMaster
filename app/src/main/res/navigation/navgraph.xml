@@ -31,7 +31,23 @@
         android:id="@+id/fragmentNoticias"
         android:name="com.example.proyectomaster.fragments.FragmentNoticias"
         android:label="fragment_noticias"
-        tools:layout="@layout/fragment_noticias" />
+        tools:layout="@layout/fragment_noticias" >
+        <argument
+            android:name="Titulo"
+            app:argType="string" />
+        <argument
+            android:name="Cuerpo"
+            app:argType="string" />
+        <argument
+            android:name="Fecha"
+            app:argType="string" />
+        <argument
+            android:name="Autor"
+            app:argType="string" />
+        <argument
+            android:name="urlImage"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentContacto"
         android:name="com.example.proyectomaster.fragments.FragmentContacto"
