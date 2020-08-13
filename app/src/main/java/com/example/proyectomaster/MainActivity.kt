@@ -23,15 +23,18 @@ class MainActivity : AppCompatActivity() {
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
 
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigation)
-        bottomNavigation.setupWithNavController(navController)
-
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
+
+        bottomNavigation.setupWithNavController(navController)
+        navView.setupWithNavController(navController)
 
         appBarConfiguration = AppBarConfiguration(setOf(
             R.id.fragmentMapa, R.id.fragmentInstructivos, R.id.fragmentSaberMas, R.id.fragmentContacto), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+
+        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment) as NavHostFragment
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
