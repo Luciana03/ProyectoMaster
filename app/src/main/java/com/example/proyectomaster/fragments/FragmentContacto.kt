@@ -38,7 +38,7 @@ class FragmentContacto : Fragment() {
         imageInsta = v.findViewById(R.id.imageInsta)
         imageTw = v.findViewById(R.id.imageTw)
         imageInternet = v.findViewById(R.id.imageInternet)
-        imageInternet = v.findViewById(R.id.imageYoutube)
+        imageYoutube = v.findViewById(R.id.imageYoutube)
         txtAboutUs = v.findViewById(R.id.txtAboutUs)
 
         return v
@@ -78,10 +78,10 @@ class FragmentContacto : Fragment() {
             startActivity(intent)
         }
 
-        /*imageYoutube.setOnClickListener {
+        imageYoutube.setOnClickListener {
             val uri5: Uri = Uri.parse("https://www.youtube.com/user/fundcardiologica")
             val intent = Intent(Intent.ACTION_VIEW, uri5)
             startActivity(intent)
-        }*/
+        }
     }
 }
