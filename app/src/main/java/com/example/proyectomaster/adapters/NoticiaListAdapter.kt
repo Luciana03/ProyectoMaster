@@ -26,16 +26,17 @@ class NoticiaListAdapter (private var noticiaList : MutableList<noticia>, var co
             val txt_name_item : TextView = v.findViewById(R.id.txt_name_item)
             txt_name_item.text = name
         }
-        fun setDate(date : String) {
+        /*fun setDate(date : String) {
             val txt_fecha_item : TextView = v.findViewById(R.id.txt_fecha_item)
             txt_fecha_item.text = date
-        }
+        }*/
         fun setImage (image: String){
             val img_item : ImageView = v.findViewById(R.id.img_item)
             Glide
                 .with(img_item)
                 .load(image)
                 .centerCrop()
+                .fitCenter()
                 .into(getImageView())
         }
         fun getCardLayout (): CardView {
@@ -59,7 +60,7 @@ class NoticiaListAdapter (private var noticiaList : MutableList<noticia>, var co
 
     override fun onBindViewHolder(holder: NoticiaHolder, position: Int) { // esto relacionará la información de nuestra lista con la visualización del item
         holder.setName(noticiaList[position].titulo)
-        holder.setDate(noticiaList[position].fecha)
+        //holder.setDate(noticiaList[position].fecha)
         holder.setImage(noticiaList[position].urlImage)
         holder.getCardLayout().setOnClickListener {
             onItemClick(position)

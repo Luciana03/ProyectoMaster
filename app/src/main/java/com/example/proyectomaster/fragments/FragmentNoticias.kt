@@ -60,6 +60,7 @@ class FragmentNoticias : Fragment() {
             .with(v)
             .load(urlImage)
             .centerCrop()
+            .fitCenter()
             .into(imgNoticia)
 
     }
