@@ -45,10 +45,10 @@ class listFragmentNoticias : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        noticias.add(noticia("Próximas actividades","Cuerpo de la noticia1","Yo1","30 de mayo1","\"https://http2.mlstatic.com/D_NQ_NP_605204-MLA31040454909_062019-O.webp"))
-        noticias.add(noticia("Titulo de la noticia2","Cuerpo de la noticia2","Yo2","30 de mayo2","\"https://http2.mlstatic.com/D_NQ_NP_605204-MLA31040454909_062019-O.webp"))
-        noticias.add(noticia("Titulo de la noticia3","Cuerpo de la noticia3","Yo3","30 de mayo3","\"https://http2.mlstatic.com/D_NQ_NP_605204-MLA31040454909_062019-O.webp"))
-        noticias.add(noticia("Titulo de la noticia4","Cuerpo de la noticia4","Yo4","30 de mayo4","\"https://http2.mlstatic.com/D_NQ_NP_605204-MLA31040454909_062019-O.webp"))
+        noticias.add(noticia("Próximas actividades","Cuerpo de la noticia1","Yo1","30 de mayo1","https://http2.mlstatic.com/D_NQ_NP_605204-MLA31040454909_062019-O.webp"))
+        noticias.add(noticia("Titulo de la noticia2","Cuerpo de la noticia2","Yo2","30 de mayo2","https://http2.mlstatic.com/D_NQ_NP_605204-MLA31040454909_062019-O.webp"))
+        noticias.add(noticia("Titulo de la noticia3","Cuerpo de la noticia3","Yo3","30 de mayo3","https://http2.mlstatic.com/D_NQ_NP_605204-MLA31040454909_062019-O.webp"))
+        noticias.add(noticia("Titulo de la noticia4","Cuerpo de la noticia4","Yo4","30 de mayo4","https://http2.mlstatic.com/D_NQ_NP_605204-MLA31040454909_062019-O.webp"))
 
 
         recNoticias.setHasFixedSize(true) //Marcar el Recycler View como de tamaño fijo
