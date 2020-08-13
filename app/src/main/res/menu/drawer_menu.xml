@@ -3,12 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/fragment3"
-        android:title="Fragment3" />
+        android:id="@+id/fragmentMapa"
+        android:title="DEA más cercano" />
     <item
-        android:id="@+id/fragment2"
-        android:title="Fragment2" />
+        android:id="@+id/fragmentInstructivos"
+        android:title="Instructivos" />
     <item
-        android:id="@+id/fragment1"
-        android:title="Fragment1" />
+        android:id="@+id/fragmentSaberMas"
+        android:title="Preguntas Frecuentes" />
+    <item
+        android:id="@+id/fragmentContacto"
+        android:title="Contacto" />
 </menu>
