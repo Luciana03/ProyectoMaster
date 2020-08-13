@@ -79,7 +79,7 @@ class FragmentContacto : Fragment() {
         }
 
         /*imageYoutube.setOnClickListener {
-            val uri: Uri = Uri.parse("https://www.youtube.com/user/fundcardiologica")
+            val uri5: Uri = Uri.parse("https://www.youtube.com/user/fundcardiologica")
             val intent = Intent(Intent.ACTION_VIEW, uri5)
             startActivity(intent)
         }*/
