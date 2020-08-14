@@ -319,13 +319,114 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/534_760.png?v=7"))
 
 
-        noticias.add(noticia("Sedentarismo, una pandemia mundial de gran impacto en" , "" , "" , "" , "" , ""))
-        noticias.add(noticia("Fumar y vapear predisponen a los pulmones a infecciones" , "" , "" , "" , "" , ""))
-        noticias.add(noticia("RCP y Coronavirus: Cuidados a tener en cuenta por el" , "" , "" , "" , "" , ""))
-        noticias.add(noticia("Población de riesgo en casa: consejos para mantener una" , "" , "" , "" , "" , ""))
-        noticias.add(noticia("Cómo mantenernos saludables en casa en épocas del" , "" , "" , "" , "" , ""))
-        noticias.add(noticia("Coronavirus: por qué las personas hipertensas" , "" , "" , "" , "" , ""))
+        noticias.add(noticia("Sedentarismo, una pandemia mundial de gran impacto en"
+/*titulo2*/ , "Sedentarismo, una pandemia mundial de gran impacto en tiempos de Coronavirus"
+/*cuerpo*/  , "El 2020 comenzó con una crisis en la salud de todo el mundo debido a la creciente expansión del COVID-19, hoy ya considerado una pandemia. Miles de muertes diarias son ocasionadas por este virus en todo el planeta y genera un colapso en el sistema sanitario de los países a los que afecta. La morbimortalidad de esta enfermedad no es para nada despreciable, por eso es tan importante poner atención y llevar a cabo las medidas necesarias para disminuir nuestro riesgo y el de nuestro entorno.\n" +
+                    "\n" +
+                    "Ahora bien, sin ir más lejos tenemos frente a nuestros ojos otra pandemia que afecta a más de la mitad de la población mundial (y de nuestro país), y que provoca más de 3.200.000 (si, millones) muertes al año, siendo el cuarto factor de riesgo de mortalidad generada por enfermedades no transmisibles (o prevenibles)[1].\n" +
+                    "\n" +
+                    "La pandemia del sedentarismo es bien conocida, y a pesar de que algunos países comenzaron a tomar medidas para estimular la actividad física, cada vez menos gente realiza el mínimo de actividad física recomendada para mantener un hábito saludable. Para lograr esto, la Organización Mundial de la Salud (OMS) sugiere realizar 30 minutos de actividad física al menos 5 días a la semana, ya sea en sesiones de 10 minutos o como nos resulte más cómodo; pero al menos alcanzar 150 minutos de movimiento físico por semana.\n" +
+                    "\n" +
+                    "Este 6 de abril, “Día Mundial de la Actividad Física”, nos encuentra en circunstancias muy particulares. Probablemente, en un entorno en el cual es muy difícil cumplir con estas metas mínimas para no aumentar nuestro riesgo cardiovascular. Sin embargo, para empezar, solo necesitamos ponernos unas zapatillas y apagar la TV un rato así arrancamos a movernos y cuidarnos aun dentro de casa.\n" +
+                    "\n" +
+                    "De esta manera, y sin mucho más, estaremos disminuyendo nuestro riesgo cardiovascular. Realizar actividad física regularmente disminuye alrededor del 30% el riesgo de tener problemas de corazón, y no es poco ya que hoy en día es la principal causa de mortalidad a nivel mundial[2].\n" +
+                    "\n" +
+                    "No necesitamos grandes espacios, ni pesas ni bancos de gimnasio; no necesitamos cintas o bicicletas (si la tenemos, es un buen momento para dejar de usarla de perchero); solo necesitamos un rato de nuestro tiempo para hacer algunos movimientos físicos. Podemos recurrir a algunas aplicaciones en el teléfono o videos de YouTube que nos guíen. Incluso hoy muchos gimnasios tienen en sus redes sociales guías gratuitas para continuar con los ejercicios en nuestras casas.\n" +
+                    "\n" +
+                    "Desde la Fundación Cardiológica Argentina (FCA) recomendamos fuertemente cuidar nuestra salud en todos sus aspectos, y realizar actividad física es uno de ellos. En cualquier contexto, con el mínimo espacio, y sin necesidad de tener un gimnasio en nuestro cuarto, nos va a permitir no solo disminuir nuestro riesgo cardiovascular sino también brindarnos mayor bienestar psico-físico, algo más que importante en los tiempos que corren.\n" +
+                    "\n" +
+                    "Encontrá aquí algunos ejercicios y consejos saludables para implementar en casa: http://www.fundacioncardiologica.org/155-Como-mantenernos-saludables-en-casa-en-epocas-del-Coronavirus.note.aspx\n" +
+                    "\n" +
+                    "Por la Fundación Cardiológica Argentina (FCA), con el asesoramiento del Dr. Gonzalo Diaz Babio, médico cardiólogo (MN 129.388) y miembro de la FCA."
+/*autor*/   , ""
+/*fecha*/   , "Noticias | 03 abr 2020"
+/*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/533_760.png?v=4"))
 
+
+        noticias.add(noticia("Fumar y vapear predisponen a los pulmones a infecciones"
+/*titulo2*/ , "Fumar y vapear predisponen a los pulmones a infecciones respiratorias como el COVID-19"
+/*cuerpo*/  , "Desde hace muchos años sabemos que el cigarrillo es perjudicial para la salud. Está claramente demostrado que produce enfermedades muy graves como Cáncer, EPOC, Infarto y ACV, entre otras.\n" +
+                    "\n" +
+                    "Pero, en los últimos años nos hemos tenido que enfrentar a nuevos desafíos: el tabaquismo y la adicción a la nicotina han resurgido en nuevos formatos, como los cigarrillos electrónicos.\n" +
+                    "\n" +
+                    "“El aerosol generado por estos dispositivos produce irritación de las vías aéreas superiores y del tejido pulmonar (llamado alveolo). Esto activa toda una línea de respuestas de tipo defensiva en el organismo que en la mayoría de los casos termina empeorando la salud”, explica el Dr. Francisco Toscano Quilon, médico cardiólogo (MN 95.358) y miembro de la Fundación Cardiológica Argentina.\n" +
+                    "\n" +
+                    "“Como si esto fuera poco, la irritación continua y sostenida de la vía aérea favorece las infecciones de tipo viral como la Gripe estacional, el H1N1 y el Covid-19”, analiza el Dr. Toscano Quilon.\n" +
+                    "\n" +
+                    "Está absolutamente demostrado que fumar y/o vapear favorece la aparición y la gravedad de la Neumonía por COVID-19. Esto estaría determinado porque el tabaquismo favorece la expresión pulmonar de ciertos receptores que favorecen la unión del virus cuando entra en contacto con el tejido pulmonar.\n" +
+                    "\n" +
+                    "Estudios realizados en China demostraron que los fumadores tienen 14 veces más probabilidades de evolucionar hacia la Neumonía. De la misma manera, se ha demostrado que los pacientes añosos y tabaquistas tienen mayor riesgo de sobreinfecciones bacterianas.\n" +
+                    "\n" +
+                    "“Sin dudas, éste es un buen momento para dejar hábitos que dañan nuestra salud como el tabaquismo y el vapeo, no solo para protegernos sino también para proteger a los adultos mayores con los que convivimos”, concluye Toscano."
+/*autor*/   , "Por la Fundación Cardiológica Argentina"
+/*fecha*/   , "Noticias | 31 mar 2020"
+/*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/532_760.jpg?v=3"))
+
+
+        noticias.add(noticia("RCP y Coronavirus: Cuidados a tener en cuenta por el equipo"
+/*titulo2*/ , "RCP y Coronavirus: Cuidados a tener en cuenta por el equipo de salud para reanimar a una persona con COVID-19"
+/*cuerpo*/  , "La American Heart Association (AHA) ha publicado en los últimos días una orientación para los profesionales médicos y personal que brinde atención médica durante el brote de COVID-19. Estas recomendaciones[i] alertan al equipo de salud sobre los cuidados que deben tener al practicar RCP a pacientes con infección por COVID-19.\n" +
+                    "\n" +
+                    "Desde la Fundación Cardiológica Argentina nos sumamos a las recomendaciones difundidas y recordamos los aspectos más relevantes que debe tener en cuenta el personal abocado a esta tarea, sin descuidar los recaudos propios del lugar de trabajo o la ciudad donde se opera para prevenir el riesgo de contagio.\n" +
+                    "\n" +
+                    "La recomendación de la AHA se enfoca principalmente en que el personal que asiste al paciente no se exponga a los aerosoles que se generan en la RCP, la intubación endotraqueal y la ventilación no invasiva, que podrían transmitir el virus. Enfatiza que la utilización del equipo de protección individual es primordial aunque signifique un retraso en el inicio de las compresiones torácicas.\n" +
+                    "\n" +
+                    "“El documento señala que si trabajás en la emergencia prehospitalaria es importante que tengas en cuenta que es fundamental que el operador telefónico consulte sobre la posibilidad de que el paciente esté infectado con COVID-19 y, si así fuera, se lo informe al equipo médico del móvil y al hospital al cual será derivado el paciente en caso de ser necesario”, afirma el Dr. Fabián Gelpi, Coordinador de RCP Básica de la Fundación Cardiológica Argentina (FCA).\n" +
+                    "\n" +
+                    "En el mismo sentido, el Dr. Gelpi explica que la publicación resalta los recaudos que se deben tener en cuenta en la ambulancia al momento del traslado de la persona:\n" +
+                    "\n" +
+                    "“Asegurate de que los dispositivos de bolsa y máscara, y otros equipos de ventilación, estén equipados con filtros HEPA.\n" +
+                    "Con la ambulancia detenida, abrí las puertas traseras del vehículo de transporte y encendé el sistema de ventilación durante los procedimientos de generación de aerosoles (esto debe hacerse lejos del tráfico de peatones).\n" +
+                    "No permitas que familiares y amigos viajen en la ambulancia con la persona con posible COVID-19 (si deben viajar, deben usar un barbijo)”.\n" +
+                    "Además, suma recomendaciones a tener presentes por el personal médico una vez que el paciente llega al hospital:\n" +
+                    "\n" +
+                    "“Una vez que tengas los elementos de protección individual, comenzar con las RCP solo con compresiones y controlar el ritmo lo antes posible. No se debe hacer ventilación de boca a boca ni con mascarilla. Según la publicación de la AHA, la intubación de secuencia rápida es el método preferido de intubación ya que se debe evitar el uso de oxigenación nasal de alto flujo y máscara debido a un mayor riesgo de generación de aerosoles.\n" +
+                    "Se debe limitar al mínimo la cantidad de personas en la habitación, la que debería estar aislada preferentemente. Se podría designar a una persona que controle el acceso”.\n" +
+                    "Estas recomendaciones aplican solamente a pacientes que padecen, o con sospecha de padecer, COVID-19. “En cualquier otro caso se deben aplicar los procedimientos habituales”, advierte Gelpi.\n" +
+                    "\n" +
+                    "“Ya te enseñamos a hacer RCP, ahora te enseñamos a cuidarte para cumplir mejor tu tarea. Muchas gracias por el enorme esfuerzo que como personal de la salud hacés todos los días por la vida de tus pacientes, y mucho más aun en estos tiempos de pandemia”, finaliza el Dr. Fabian Gelpi."
+/*autor*/   , ""
+/*fecha*/   , "Noticias | 27 mar 2020"
+/*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/357_760.jpg?v=5"))
+
+
+        noticias.add(noticia("Población de riesgo en casa: consejos para mantener"
+/*titulo2*/ , "Población de riesgo en casa: consejos para mantener una rutina saludable que cuide nuestro corazón"
+/*cuerpo*/  , "Ante el impacto de la pandemia del Coronavirus en Argentina, las personas con alguna afección cardiaca integran la población de riesgo ante un potencial contagio, al igual que los mayores de 60 años, las embarazadas, las personas con enfermedades respiratorias crónicas, con inmunodeficiencias congénitas adquiridas o insuficiencia renal crónica en diálisis, pacientes oncohematológicos y trasplantados, obesos mórbidos y diabéticos.\n" +
+                    "\n" +
+                    "Muchas patologías cardíacas agravan el cuadro del virus por eso es muy importante seguir las recomendaciones emitidas por el Ministerio de Salud de la Nación para esta población: mantener las medidas de higiene ya conocidas, comunicarse con el sistema de salud ante la presencia de algún síntoma (aunque sea leve), permanecer en casa la mayor parte del tiempo, minimizar el contacto social y, si viven hogares para personas mayores, evitar las visitas de quienes presenten síntomas respiratorios o que hayan estado en lugares de transmisión los últimos 14 días.\n" +
+                    "\n" +
+                    "También, es muy importante que si tenían pautada una consulta con el cardiólogo se comuniquen con él para evaluar su urgencia o necesidad, y fundamentalmente mantener los hábitos saludables en casa mientras permanezca esta situación. Continuar la rutina saludable nos permitirá minimizar posibles complicaciones en la salud. Por eso, desde la Fundación Cardiológica Argentina compartimos algunos consejos para lograrlo.\n" +
+                    "\n" +
+                    "Comamos sano\n" +
+                    "\n" +
+                    "Es importante abastecerse de alimentos básicos saludables y accesibles. Para elegirlos, siempre intentar darle prioridad a alimentos naturales lo menos procesados posible, comparar las etiquetas nutricionales y seleccionar aquellas opciones con menor cantidad de sal y azúcar agregadas. Algunas ideas pueden ser:\n" +
+                    "\n" +
+                    "Frutas y verduras enlatadas, congeladas y secas\n" +
+                    "Pechugas de pollo congeladas\n" +
+                    "Pescados y carnes enlatados como atún claro o pollo de carne blanca envasados \u200B\u200Ben agua\n" +
+                    "Legumbres secos o enlatados\n" +
+                    "Granos enteros como avena, arroz integral y quinua\n" +
+                    "Hierbas y especias secas\n" +
+                    "Huevos\n" +
+                    "Mantengámonos activos\n" +
+                    "\n" +
+                    "Estar tanto tiempo en casa, probablemente, nos tiente a mirar más la tele o estar con la computadora o el celular. Algunos consejos para combatir el sedentarismo y mantenernos activos en casa son:\n" +
+                    "\n" +
+                    "Programá un horario para realizar actividad física.\n" +
+                    "Ponete objetivos.\n" +
+                    "Hay muchas rutinas que podés seguir día a día y encontrar en internet.\n" +
+                    "Recordá estirar, es muy importante antes y después de hacer actividad física.\n" +
+                    "Manejemos el estrés\n" +
+                    "\n" +
+                    "Estamos viviendo una situación que puede generar mucho pánico y ansiedad. La buena noticia es que podemos manejarlo, y desde casa, con algunas medidas sencillas:\n" +
+                    "\n" +
+                    "Descansá correctamente, establecé un horario para acostarte y levantarte.\n" +
+                    "Hacé yoga.\n" +
+                    "Practicá meditación."
+/*autor*/   , "Por la Fundación Cardiológica Argentina (FCA), con el asesoramiento de la Dra. Fiorella Tartaglione, médica cardióloga (MN 144.259) y miembro FCA."
+/*fecha*/   , "Noticias | 20 mar 2020"
+/*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/531_760.jpg?v=3"))
 
 
 
@@ -340,8 +441,8 @@ class listFragmentNoticias : Fragment() {
         recNoticias.adapter = noticiaListAdapter
     }
 
-    fun onItemClick ( position : Int ) {
 
+    fun onItemClick ( position : Int ) {
 
         var Titulo2 = noticias[position].titulo2
         var Cuerpo = noticias[position].cuerpo
