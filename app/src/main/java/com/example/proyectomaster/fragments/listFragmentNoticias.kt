@@ -29,7 +29,7 @@ class listFragmentNoticias : Fragment() {
 
     lateinit var recNoticias : RecyclerView
 
-    var listanoticias : MutableList<noticia> = ArrayList<noticia>()
+    var noticiaList : MutableList<noticia> = ArrayList<noticia>()
 
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var noticiaListAdapter: NoticiaListAdapter
@@ -52,22 +52,22 @@ class listFragmentNoticias : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        /*db.collection("noticias")
+        db.collection("noticias")
             .get()
-            .addOnSuccessListener { result ->
-                for (document in result) {
-                    listanoticias.add(document)
+            .addOnSuccessListener { snapshot ->
+                for (noticia in snapshot) {
+                    noticiaList.add(noticia.toObject())
                 }
             }
             .addOnFailureListener { exception ->
                 Log.w(TAG, "Error getting documents: ", exception)
-            }*/
+            }
 
 
 
 
 
-       listanoticias.add(noticia("Los riesgos de ser un paciente con enfermedad "
+       noticiaList.add(noticia("Los riesgos de ser un paciente con enfermedad "
 /*titulo2*/ , "Los riesgos de ser un paciente con enfermedad cardiovascular en época del COVID-19"
 /*cuerpo*/  , "Encuesta de la Fundación Cardiológica Argentina que muestra el Lado B de esta pandemia.\n" +
                 "\n" +
@@ -121,7 +121,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/535_760.jpg?v=18"))
 
 
-        listanoticias.add(noticia("Documento de posición Sociedad Argentina de"
+        noticiaList.add(noticia("Documento de posición Sociedad Argentina de"
 /*titulo2*/ , "Documento de posición Sociedad Argentina de Cardiología – Fundación Cardiológica Argentina: Enfermedad Cardiovascular en tiempos de COVID-19"
 /*cuerpo*/  , "Resumen\n" +
                 "\n" +
@@ -341,7 +341,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/534_760.png?v=7"))
 
 
-        listanoticias.add(noticia("Sedentarismo, una pandemia mundial de gran impacto en"
+        noticiaList.add(noticia("Sedentarismo, una pandemia mundial de gran impacto en"
 /*titulo2*/ , "Sedentarismo, una pandemia mundial de gran impacto en tiempos de Coronavirus"
 /*cuerpo*/  , "El 2020 comenzó con una crisis en la salud de todo el mundo debido a la creciente expansión del COVID-19, hoy ya considerado una pandemia. Miles de muertes diarias son ocasionadas por este virus en todo el planeta y genera un colapso en el sistema sanitario de los países a los que afecta. La morbimortalidad de esta enfermedad no es para nada despreciable, por eso es tan importante poner atención y llevar a cabo las medidas necesarias para disminuir nuestro riesgo y el de nuestro entorno.\n" +
                     "\n" +
@@ -365,7 +365,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/533_760.png?v=4"))
 
 
-        listanoticias.add(noticia("Fumar y vapear predisponen a los pulmones a infecciones"
+        noticiaList.add(noticia("Fumar y vapear predisponen a los pulmones a infecciones"
 /*titulo2*/ , "Fumar y vapear predisponen a los pulmones a infecciones respiratorias como el COVID-19"
 /*cuerpo*/  , "Desde hace muchos años sabemos que el cigarrillo es perjudicial para la salud. Está claramente demostrado que produce enfermedades muy graves como Cáncer, EPOC, Infarto y ACV, entre otras.\n" +
                     "\n" +
@@ -385,7 +385,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/532_760.jpg?v=3"))
 
 
-        listanoticias.add(noticia("RCP y Coronavirus: Cuidados a tener en cuenta por el equipo"
+        noticiaList.add(noticia("RCP y Coronavirus: Cuidados a tener en cuenta por el equipo"
 /*titulo2*/ , "RCP y Coronavirus: Cuidados a tener en cuenta por el equipo de salud para reanimar a una persona con COVID-19"
 /*cuerpo*/  , "La American Heart Association (AHA) ha publicado en los últimos días una orientación para los profesionales médicos y personal que brinde atención médica durante el brote de COVID-19. Estas recomendaciones[i] alertan al equipo de salud sobre los cuidados que deben tener al practicar RCP a pacientes con infección por COVID-19.\n" +
                     "\n" +
@@ -412,7 +412,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/357_760.jpg?v=5"))
 
 
-        listanoticias.add(noticia("Población de riesgo en casa: consejos para mantener"
+        noticiaList.add(noticia("Población de riesgo en casa: consejos para mantener"
 /*titulo2*/ , "Población de riesgo en casa: consejos para mantener una rutina saludable que cuide nuestro corazón"
 /*cuerpo*/  , "Ante el impacto de la pandemia del Coronavirus en Argentina, las personas con alguna afección cardiaca integran la población de riesgo ante un potencial contagio, al igual que los mayores de 60 años, las embarazadas, las personas con enfermedades respiratorias crónicas, con inmunodeficiencias congénitas adquiridas o insuficiencia renal crónica en diálisis, pacientes oncohematológicos y trasplantados, obesos mórbidos y diabéticos.\n" +
                     "\n" +
@@ -459,7 +459,7 @@ class listFragmentNoticias : Fragment() {
         linearLayoutManager = LinearLayoutManager(context)
         recNoticias.layoutManager = linearLayoutManager
 
-        noticiaListAdapter = NoticiaListAdapter(listanoticias,requireContext()){position -> onItemClick(position)}
+        noticiaListAdapter = NoticiaListAdapter(noticiaList,requireContext()){position -> onItemClick(position)}
         //noticiaListAdapter = NoticiaListAdapter(listaDenoticia) //Indicar el tipo de adaptador del item
         recNoticias.adapter = noticiaListAdapter
     }
@@ -467,11 +467,11 @@ class listFragmentNoticias : Fragment() {
 
     fun onItemClick ( position : Int ) {
 
-        var Titulo2 = listanoticias[position].titulo2
-        var Cuerpo = listanoticias[position].cuerpo
-        var Fecha = listanoticias[position].fecha
-        var Autor = listanoticias[position].autor
-        var Imagen = listanoticias[position].urlimage
+        var Titulo2 = noticiaList[position].titulo2
+        var Cuerpo = noticiaList[position].cuerpo
+        var Fecha = noticiaList[position].fecha
+        var Autor = noticiaList[position].autor
+        var Imagen = noticiaList[position].urlimage
 
         val a12= listFragmentNoticiasDirections.actionListFragmentNoticias2ToFragmentNoticias(Titulo2,Cuerpo,Fecha,Autor,Imagen)
         v.findNavController().navigate(a12)
