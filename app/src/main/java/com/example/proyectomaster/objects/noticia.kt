@@ -7,7 +7,7 @@ class noticia (titulo: String, titulo2: String, cuerpo: String, autor: String, f
     var cuerpo : String
     var autor : String
     var fecha : String
-    var urlImage: String
+    var urlimage: String
 
     init {
         this.titulo = titulo!!
@@ -15,6 +15,7 @@ class noticia (titulo: String, titulo2: String, cuerpo: String, autor: String, f
         this.cuerpo = cuerpo!!
         this.autor = autor!!
         this.fecha = fecha!!
-        this.urlImage = urlImage!!
+        this.urlimage = urlImage!!
     }
+    constructor():this("","","","","","")
 }

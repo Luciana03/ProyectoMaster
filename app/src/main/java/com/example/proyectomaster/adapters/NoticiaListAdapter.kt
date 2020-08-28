@@ -61,7 +61,7 @@ class NoticiaListAdapter (private var noticiaList : MutableList<noticia>, var co
     override fun onBindViewHolder(holder: NoticiaHolder, position: Int) { // esto relacionará la información de nuestra lista con la visualización del item
         holder.setName(noticiaList[position].titulo)
         //holder.setDate(noticiaList[position].fecha)
-        holder.setImage(noticiaList[position].urlImage)
+        holder.setImage(noticiaList[position].urlimage)
         holder.getCardLayout().setOnClickListener {
             onItemClick(position)
         }

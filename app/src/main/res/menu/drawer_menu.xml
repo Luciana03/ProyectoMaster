@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/fragmentMapa"
+        android:id="@+id/mapsFragment"
         android:title="DEA más cercano" />
     <item
         android:id="@+id/fragmentInstructivos"

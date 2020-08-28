@@ -1,6 +1,9 @@
 package com.example.proyectomaster.fragments
 
+import android.content.ContentValues.TAG
+import android.graphics.Insets.add
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectomaster.R
 import com.example.proyectomaster.adapters.NoticiaListAdapter
 import com.example.proyectomaster.objects.noticia
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.toObject
 
 /**
  * A simple [Fragment] subclass.
@@ -20,9 +25,11 @@ class listFragmentNoticias : Fragment() {
 
     lateinit var v: View
 
+    val db = FirebaseFirestore.getInstance()
+
     lateinit var recNoticias : RecyclerView
 
-    var noticias : MutableList<noticia> = ArrayList<noticia>()
+    var listanoticias : MutableList<noticia> = ArrayList<noticia>()
 
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var noticiaListAdapter: NoticiaListAdapter
@@ -45,7 +52,22 @@ class listFragmentNoticias : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        noticias.add(noticia("Los riesgos de ser un paciente con enfermedad "
+        /*db.collection("noticias")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    listanoticias.add(document)
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents: ", exception)
+            }*/
+
+
+
+
+
+       listanoticias.add(noticia("Los riesgos de ser un paciente con enfermedad "
 /*titulo2*/ , "Los riesgos de ser un paciente con enfermedad cardiovascular en época del COVID-19"
 /*cuerpo*/  , "Encuesta de la Fundación Cardiológica Argentina que muestra el Lado B de esta pandemia.\n" +
                 "\n" +
@@ -99,7 +121,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/535_760.jpg?v=18"))
 
 
-        noticias.add(noticia("Documento de posición Sociedad Argentina de"
+        listanoticias.add(noticia("Documento de posición Sociedad Argentina de"
 /*titulo2*/ , "Documento de posición Sociedad Argentina de Cardiología – Fundación Cardiológica Argentina: Enfermedad Cardiovascular en tiempos de COVID-19"
 /*cuerpo*/  , "Resumen\n" +
                 "\n" +
@@ -319,7 +341,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/534_760.png?v=7"))
 
 
-        noticias.add(noticia("Sedentarismo, una pandemia mundial de gran impacto en"
+        listanoticias.add(noticia("Sedentarismo, una pandemia mundial de gran impacto en"
 /*titulo2*/ , "Sedentarismo, una pandemia mundial de gran impacto en tiempos de Coronavirus"
 /*cuerpo*/  , "El 2020 comenzó con una crisis en la salud de todo el mundo debido a la creciente expansión del COVID-19, hoy ya considerado una pandemia. Miles de muertes diarias son ocasionadas por este virus en todo el planeta y genera un colapso en el sistema sanitario de los países a los que afecta. La morbimortalidad de esta enfermedad no es para nada despreciable, por eso es tan importante poner atención y llevar a cabo las medidas necesarias para disminuir nuestro riesgo y el de nuestro entorno.\n" +
                     "\n" +
@@ -343,7 +365,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/533_760.png?v=4"))
 
 
-        noticias.add(noticia("Fumar y vapear predisponen a los pulmones a infecciones"
+        listanoticias.add(noticia("Fumar y vapear predisponen a los pulmones a infecciones"
 /*titulo2*/ , "Fumar y vapear predisponen a los pulmones a infecciones respiratorias como el COVID-19"
 /*cuerpo*/  , "Desde hace muchos años sabemos que el cigarrillo es perjudicial para la salud. Está claramente demostrado que produce enfermedades muy graves como Cáncer, EPOC, Infarto y ACV, entre otras.\n" +
                     "\n" +
@@ -363,7 +385,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/532_760.jpg?v=3"))
 
 
-        noticias.add(noticia("RCP y Coronavirus: Cuidados a tener en cuenta por el equipo"
+        listanoticias.add(noticia("RCP y Coronavirus: Cuidados a tener en cuenta por el equipo"
 /*titulo2*/ , "RCP y Coronavirus: Cuidados a tener en cuenta por el equipo de salud para reanimar a una persona con COVID-19"
 /*cuerpo*/  , "La American Heart Association (AHA) ha publicado en los últimos días una orientación para los profesionales médicos y personal que brinde atención médica durante el brote de COVID-19. Estas recomendaciones[i] alertan al equipo de salud sobre los cuidados que deben tener al practicar RCP a pacientes con infección por COVID-19.\n" +
                     "\n" +
@@ -390,7 +412,7 @@ class listFragmentNoticias : Fragment() {
 /*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/357_760.jpg?v=5"))
 
 
-        noticias.add(noticia("Población de riesgo en casa: consejos para mantener"
+        listanoticias.add(noticia("Población de riesgo en casa: consejos para mantener"
 /*titulo2*/ , "Población de riesgo en casa: consejos para mantener una rutina saludable que cuide nuestro corazón"
 /*cuerpo*/  , "Ante el impacto de la pandemia del Coronavirus en Argentina, las personas con alguna afección cardiaca integran la población de riesgo ante un potencial contagio, al igual que los mayores de 60 años, las embarazadas, las personas con enfermedades respiratorias crónicas, con inmunodeficiencias congénitas adquiridas o insuficiencia renal crónica en diálisis, pacientes oncohematológicos y trasplantados, obesos mórbidos y diabéticos.\n" +
                     "\n" +
@@ -430,13 +452,14 @@ class listFragmentNoticias : Fragment() {
 
 
 
+
         recNoticias.setHasFixedSize(true) //Marcar el Recycler View como de tamaño fijo
 
         //Indicar el tipo de layout que va a tener el Recycler View
         linearLayoutManager = LinearLayoutManager(context)
         recNoticias.layoutManager = linearLayoutManager
 
-        noticiaListAdapter = NoticiaListAdapter(noticias,requireContext()){position -> onItemClick(position)}
+        noticiaListAdapter = NoticiaListAdapter(listanoticias,requireContext()){position -> onItemClick(position)}
         //noticiaListAdapter = NoticiaListAdapter(listaDenoticia) //Indicar el tipo de adaptador del item
         recNoticias.adapter = noticiaListAdapter
     }
@@ -444,11 +467,11 @@ class listFragmentNoticias : Fragment() {
 
     fun onItemClick ( position : Int ) {
 
-        var Titulo2 = noticias[position].titulo2
-        var Cuerpo = noticias[position].cuerpo
-        var Fecha = noticias[position].fecha
-        var Autor = noticias[position].autor
-        var Imagen = noticias[position].urlImage
+        var Titulo2 = listanoticias[position].titulo2
+        var Cuerpo = listanoticias[position].cuerpo
+        var Fecha = listanoticias[position].fecha
+        var Autor = listanoticias[position].autor
+        var Imagen = listanoticias[position].urlimage
 
         val a12= listFragmentNoticiasDirections.actionListFragmentNoticias2ToFragmentNoticias(Titulo2,Cuerpo,Fecha,Autor,Imagen)
         v.findNavController().navigate(a12)

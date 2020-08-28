@@ -7,7 +7,7 @@
         android:icon="@drawable/iconoperfil"
         android:title="Perfil" />
     <item
-        android:id="@+id/fragmentMapa"
+        android:id="@+id/mapsFragment"
         android:icon="@drawable/iconomapa"
         android:title="Mapa" />
     <item

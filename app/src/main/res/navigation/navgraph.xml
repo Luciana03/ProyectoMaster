@@ -3,12 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/fragmentMapa">
-    <fragment
-        android:id="@+id/fragmentMapa"
-        android:name="com.example.proyectomaster.fragments.FragmentMapa"
-        android:label="fragment_mapa"
-        tools:layout="@layout/fragment_mapa" />
+    app:startDestination="@id/mapsFragment">
     <fragment
         android:id="@+id/fragmentPerfil"
         android:name="com.example.proyectomaster.fragments.FragmentPerfil"
@@ -77,4 +72,9 @@
             android:id="@+id/action_listFragmentNoticias2_to_fragmentNoticias"
             app:destination="@id/fragmentNoticias" />
     </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.proyectomaster.fragments.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 </navigation>
