@@ -49,7 +49,7 @@ class FragmentNoticias : Fragment() {
         val Titulo = FragmentNoticiasArgs.fromBundle(requireArguments()).Titulo
         val Cuerpo = FragmentNoticiasArgs.fromBundle(requireArguments()).Cuerpo
         val Autor = FragmentNoticiasArgs.fromBundle(requireArguments()).Autor
-        val urlImage = FragmentNoticiasArgs.fromBundle(requireArguments()).urlImage
+        val urlImage = FragmentNoticiasArgs.fromBundle(requireArguments()).urlimage
 
         txtFecha.text = Fecha
         txtTitulo.text = Titulo

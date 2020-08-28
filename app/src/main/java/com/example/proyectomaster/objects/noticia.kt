@@ -1,6 +1,6 @@
 package com.example.proyectomaster.objects
 
-class noticia (titulo: String, titulo2: String, cuerpo: String, autor: String, fecha: String, urlImage: String) {
+class noticia (titulo: String, titulo2: String, cuerpo: String, autor: String, fecha: String, urlimage: String) {
 
     var titulo : String
     var titulo2 : String
@@ -15,7 +15,7 @@ class noticia (titulo: String, titulo2: String, cuerpo: String, autor: String, f
         this.cuerpo = cuerpo!!
         this.autor = autor!!
         this.fecha = fecha!!
-        this.urlimage = urlImage!!
+        this.urlimage = urlimage!!
     }
     constructor():this("","","","","","")
 }

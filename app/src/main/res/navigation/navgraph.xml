@@ -40,7 +40,7 @@
             android:name="Autor"
             app:argType="string" />
         <argument
-            android:name="urlImage"
+            android:name="urlimage"
             app:argType="string" />
     </fragment>
     <fragment
