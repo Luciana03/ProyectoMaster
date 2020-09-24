@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "493871029332",
-    "firebase_url": "https://profecto-fca.firebaseio.com",
-    "project_id": "profecto-fca",
-    "storage_bucket": "profecto-fca.appspot.com"
+    "project_number": "575018394694",
+    "firebase_url": "https://proyecto-fca-4fbb4.firebaseio.com",
+    "project_id": "proyecto-fca-4fbb4",
+    "storage_bucket": "proyecto-fca-4fbb4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:493871029332:android:ef96c29650110644c061c1",
+        "mobilesdk_app_id": "1:575018394694:android:191b7a201b65ff446b9647",
         "android_client_info": {
           "package_name": "com.example.proyectomaster"
         }
       },
       "oauth_client": [
         {
-          "client_id": "493871029332-kgfhkr818hehuti86ovgseqn9smmj2rh.apps.googleusercontent.com",
+          "client_id": "575018394694-912c99od4d007i9vk2f5k4bc6l584kcr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBbp3WPiPaoOe0O4Y8XjmMk1M980r6tyHc"
+          "current_key": "AIzaSyBIyNdzJMw4zqz_ypmXDHGu5jz8MpT9HGg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "493871029332-kgfhkr818hehuti86ovgseqn9smmj2rh.apps.googleusercontent.com",
+              "client_id": "575018394694-912c99od4d007i9vk2f5k4bc6l584kcr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

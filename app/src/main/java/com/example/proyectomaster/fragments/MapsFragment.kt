@@ -32,14 +32,16 @@ class MapsFragment : Fragment() {
          */
         map = googleMap
         map.getUiSettings().setZoomControlsEnabled(true) //para que puedas modificar el zoom
-        //map.setOnMarkerClickListener(MapsActivity)
+        //map.setOnMarkerClickListener(MapsActivity) .toDouble()
 
-        val sydney = LatLng(-34.6, -58.4)
-        map.addMarker(MarkerOptions().position(sydney).title("Marker in Fundacion Cardiologica Argentina"))
-        val NOsydney = LatLng(-34.6101, -58.429) //les puse nombres cualquiea para los marcadores
-        map.addMarker(MarkerOptions().position(NOsydney).title("Marker in ORT"))
+        val sydney = LatLng(-34.5970348, -58.400563)
+        map.addMarker(MarkerOptions().position(sydney).title("Fundacion Cardiologica Argentina"))
+        val ORT = LatLng(-34.6100019,-58.4293771) //les puse nombres cualquiea para los marcadores
+        map.addMarker(MarkerOptions().position(ORT).title("ORT sede Almagro"))
+        val HIBSAS = LatLng(-34.6063773,-58.4433239) //les puse nombres cualquiea para los marcadores
+        map.addMarker(MarkerOptions().position(HIBSAS).title("Hospital Italiano de Buenos Aires"))
 
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(NOsydney, 12.0f))
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(ORT, 12.0f))
     }
 
     override fun onCreateView(

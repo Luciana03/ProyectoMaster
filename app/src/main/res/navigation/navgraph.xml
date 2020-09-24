@@ -55,7 +55,7 @@
         tools:layout="@layout/fragment_instructivos" />
     <fragment
         android:id="@+id/fragmentJuegos"
-        android:name="com.example.proyectomaster.fragments.FragmentJuegos"
+        android:name="com.example.proyectomaster.fragments.Juegos.FragmentJuegos"
         android:label="fragment_juegos"
         tools:layout="@layout/fragment_juegos" />
     <fragment
@@ -77,4 +77,14 @@
         android:name="com.example.proyectomaster.fragments.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/juegoSecuencia"
+        android:name="com.example.proyectomaster.fragments.Juegos.JuegoSecuencia"
+        android:label="fragment_juego_secuencia"
+        tools:layout="@layout/fragment_juego_secuencia" />
+    <fragment
+        android:id="@+id/juegoVoF"
+        android:name="com.example.proyectomaster.fragments.Juegos.JuegoVoF"
+        android:label="fragment_juego_vo"
+        tools:layout="@layout/fragment_juego_vo" />
 </navigation>
