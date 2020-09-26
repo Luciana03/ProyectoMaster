@@ -6,9 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.example.proyectomaster.R
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_juego_vo.*
@@ -21,7 +19,8 @@ class JuegoVoF : Fragment() {
     lateinit var txtRespuesta: TextView
     lateinit var btnAnterior: Button
     lateinit var btnSiguiente: Button
-
+    lateinit var radioGroup: RadioGroup
+    lateinit var radioButton: RadioButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +32,7 @@ class JuegoVoF : Fragment() {
         txtRespuesta = v.findViewById(R.id.txtRespuesta)
         btnAnterior = v.findViewById(R.id.btnAnterior)
         btnSiguiente = v.findViewById(R.id.btnSiguiente)
+        radioGroup = v.findViewById(R.id.radioGroup)
         return v
     }
 
@@ -40,9 +40,10 @@ class JuegoVoF : Fragment() {
         super.onStart()
         txtPregunta.text = "Cuanto más tarde se comienza con RCP básica, mejor es el pronóstico"
 
-
-            if (btnFalso.isChecked || btnVerdadero.isChecked) {
+        radioGroup.setOnCheckedChangeListener { group, checkedId ->
+            if (Falso.isChecked || Verdadero.isChecked) {
                 txtRespuesta.text = "FALSO: la RCP básica precoz tiene mejor pronóstico"
             }
+        }
     }
 }

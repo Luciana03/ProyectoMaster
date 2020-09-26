@@ -74,6 +74,7 @@
         app:layout_constraintGuide_begin="175dp" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
@@ -82,14 +83,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5">
 
         <RadioButton
-            android:id="@+id/btnVerdadero"
+            android:id="@+id/Verdadero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Verdadero"
             android:textColor="#000000" />
 
         <RadioButton
-            android:id="@+id/btnFalso"
+            android:id="@+id/Falso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Falso"
