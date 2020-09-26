@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun callPhone(){
-        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "45427537"))
+        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "107"))
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.CALL_PHONE
