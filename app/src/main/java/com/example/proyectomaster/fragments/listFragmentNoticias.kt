@@ -65,9 +65,11 @@ class listFragmentNoticias : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        noticiaList.add(noticia("Los riesgos de ser un paciente con enfermedad "
-/*titulo2*/ , "Los riesgos de ser un paciente con enfermedad cardiovascular en época del COVID-19"
-/*cuerpo*/  , "Encuesta de la Fundación Cardiológica Argentina que muestra el Lado B de esta pandemia.\n" +
+
+        val noticia1 = hashMapOf(
+            "titulo" to "Los riesgos de ser un paciente con enfermedad",
+            "titulo2" to "Los riesgos de ser un paciente con enfermedad cardiovascular en época del COVID-19",
+            "cuerpo" to "Encuesta de la Fundación Cardiológica Argentina que muestra el Lado B de esta pandemia.\n" +
                     "\n" +
                     "La edad media de los encuestados fue 56 años. La mayoría mujeres (66.8%).\n" +
                     "El 42% refirió haber necesitado atención médica por su enfermedad cardiovascular (ECV), pero más de la mitad no pudieron hacerla (57.9%).\n" +
@@ -113,10 +115,16 @@ class listFragmentNoticias : Fragment() {
                     "\n" +
                     "La asistencia médica que informaron los encuestados correspondió el 44.3% a Obra Social, 29% Medicina Prepaga, sector público  y PAMI 10.8% y 11% respectivamente y 7.1% en forma particular.\n" +
                     "\n" +
-                    "La distribución de las enfermedades cardiovasculares más frecuentes, donde el encuestado informa la que considera más importante y para la cual se encuentra medicado fue:  52.1%  Hipertensión arterial 10% infarto de miocardio, 8,1% insuficiencia cardíaca crónica y 6.9% arritmias. El resto se distribuyó entre otras enfermedades (aparición Cardiopatías congénitas, portador de marcapasos u otro dispositivo, cirugía cardíaca (de by pass o válvulas), angina de pecho sin infarto, angioplastia coronaria, enfermedad valvular, etc.)"
-/*autor*/   , ""
-/*fecha*/   , "Noticias | 15 may 2020"
-/*foto*/    , "http://www.fundacioncardiologica.org/Multimedios/imgs/535_760.jpg?v=18"))
+                    "La distribución de las enfermedades cardiovasculares más frecuentes, donde el encuestado informa la que considera más importante y para la cual se encuentra medicado fue:  52.1%  Hipertensión arterial 10% infarto de miocardio, 8,1% insuficiencia cardíaca crónica y 6.9% arritmias. El resto se distribuyó entre otras enfermedades (aparición Cardiopatías congénitas, portador de marcapasos u otro dispositivo, cirugía cardíaca (de by pass o válvulas), angina de pecho sin infarto, angioplastia coronaria, enfermedad valvular, etc.)",
+            "autor" to " ",
+            "fecha" to "Noticias | 15 may 2020",
+            "urlimage" to "http://www.fundacioncardiologica.org/Multimedios/imgs/535_760.jpg?v=18"
+        )
+
+        db.collection("noticias").document("noticia1")
+            .set(noticia1)
+
+
 
 
         var docRef = db.collection("noticias")
