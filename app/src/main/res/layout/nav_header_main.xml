@@ -19,4 +19,11 @@
         android:layout_width="174dp"
         android:layout_height="139dp"
         app:srcCompat="@drawable/logofca2" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:backgroundTint="#000000" />
 </LinearLayout>
