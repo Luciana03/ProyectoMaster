@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.proyectomaster.R
@@ -18,6 +19,9 @@ class JuegoVoF : Fragment() {
     lateinit var v : View
     lateinit var txtPregunta: TextView
     lateinit var txtRespuesta: TextView
+    lateinit var btnAnterior: Button
+    lateinit var btnSiguiente: Button
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +31,8 @@ class JuegoVoF : Fragment() {
         v = inflater.inflate(R.layout.fragment_juego_vo, container, false)
         txtPregunta = v.findViewById(R.id.txtPregunta)
         txtRespuesta = v.findViewById(R.id.txtRespuesta)
+        btnAnterior = v.findViewById(R.id.btnAnterior)
+        btnSiguiente = v.findViewById(R.id.btnSiguiente)
         return v
     }
 
@@ -34,14 +40,9 @@ class JuegoVoF : Fragment() {
         super.onStart()
         txtPregunta.text = "Cuanto más tarde se comienza con RCP básica, mejor es el pronóstico"
 
-        btnCheck.setOnClickListener {
+
             if (btnFalso.isChecked || btnVerdadero.isChecked) {
                 txtRespuesta.text = "FALSO: la RCP básica precoz tiene mejor pronóstico"
-            } else {
-                val toast = Toast.makeText(activity, "Elija una opción", Toast.LENGTH_LONG)
-                toast.setGravity(Gravity.BOTTOM, 0, 200)
-                toast.show()
             }
-        }
     }
 }
