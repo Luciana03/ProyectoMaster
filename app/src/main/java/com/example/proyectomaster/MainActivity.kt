@@ -45,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
         bottomNavigation.setupWithNavController(navController)
 
+
+
         checkPermission()
     }
 
@@ -88,10 +90,10 @@ class MainActivity : AppCompatActivity() {
                     arrayOf(Manifest.permission.CALL_PHONE),
                     42)
             }
-        } else {
+        } /*else {
             // Permission has already been granted
             callPhone()
-        }
+        }*/
     }
 
     override fun onRequestPermissionsResult(requestCode: Int,
