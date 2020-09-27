@@ -34,8 +34,8 @@ class MapsFragment : Fragment() {
         map.getUiSettings().setZoomControlsEnabled(true) //para que puedas modificar el zoom
         //map.setOnMarkerClickListener(MapsActivity) .toDouble()
 
-        val sydney = LatLng(-34.5970348, -58.400563)
-        map.addMarker(MarkerOptions().position(sydney).title("Fundacion Cardiologica Argentina"))
+        val FCA = LatLng(-34.5970348, -58.400563)
+        map.addMarker(MarkerOptions().position(FCA).title("Fundacion Cardiologica Argentina"))
         val ORT = LatLng(-34.6100019,-58.4293771) //les puse nombres cualquiea para los marcadores
         map.addMarker(MarkerOptions().position(ORT).title("ORT sede Almagro"))
         val HIBSAS = LatLng(-34.6063773,-58.4433239) //les puse nombres cualquiea para los marcadores

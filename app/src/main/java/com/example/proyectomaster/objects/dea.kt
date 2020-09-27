@@ -1,15 +1,16 @@
 package com.example.proyectomaster.objects
 
-class dea (direccion: String, nombreDelLugar: String, telefono: String, privado: String, latitud: String, longitud: String, urlimage: String) {
+class dea (direccion: String?, nombreDelLugar: String?, telefono: String?, privado: String?, latitud: String?, longitud: String?, urlimage: String?) {
 
-    var direccion: String
-    var nombreDelLugar: String
-    var telefono: String
-    var privado: String
-    var latitud: String
-    var longitud : String
-    var urlimage: String
+    var direccion: String = ""
+    var nombreDelLugar: String = ""
+    var telefono: String = ""
+    var privado: String = ""
+    var latitud: String = ""
+    var longitud : String = ""
+    var urlimage: String = ""
 
+    constructor():this("","","","","","","")
 
     init {
         this.direccion = direccion!!
@@ -20,6 +21,4 @@ class dea (direccion: String, nombreDelLugar: String, telefono: String, privado:
         this.longitud = longitud!!
         this.urlimage = urlimage!!
     }
-
-    constructor():this("","","","","","","")
 }
