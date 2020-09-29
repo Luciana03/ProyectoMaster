@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                     arrayOf(Manifest.permission.CALL_PHONE),
                     42)
             }
-        } /*else {
+        } /*else {  si descomento esto apenas abris la app llama directamente, despues de que cortas podes seguir usando la app normal
             // Permission has already been granted
             callPhone()
         }*/
