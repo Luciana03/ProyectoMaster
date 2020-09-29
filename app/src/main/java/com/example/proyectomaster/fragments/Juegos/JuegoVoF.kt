@@ -1,15 +1,21 @@
 package com.example.proyectomaster.fragments.Juegos
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.proyectomaster.R
+import com.example.proyectomaster.adapters.NoticiaListAdapter
 import com.example.proyectomaster.objects.gameToF
+import com.example.proyectomaster.objects.noticia
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.toObject
 import kotlinx.android.synthetic.main.fragment_juego_vo.*
 
 
@@ -26,6 +32,7 @@ class JuegoVoF : Fragment() {
 
     var numeroDePregunta : Int = 0
 
+    var db =  FirebaseFirestore.getInstance()
 
 
 
@@ -48,9 +55,28 @@ class JuegoVoF : Fragment() {
         super.onStart()
 
         juegoVoFList.add(gameToF("Cuanto más tarde se comienza con RCP básica, mejor es el pronóstico" , "FALSO: la RCP básica precoz tiene mejor pronóstico"))
-        juegoVoFList.add(gameToF("Lo primero que se debe hacer al ver a una persona que colapsa, es activar el sistema de emergencias" , "VERDADERO: lo primero que se debe hacer al ver a una persona que colapsa, es activar el sistema de emergencias y luego iniciar la RCP"))
-        juegoVoFList.add(gameToF("El DEA precoz (desfibrilador automático externo) salva vidas" , "VERDADERO: la utilización de DEA en los primeros minutos del paro cardiaco, ante un ritmo cardíaco que pueda ser chocado (desfibrilado) salva vidas. El equipo es capaz de diferenciar entre ritmos desfibrilables y no desfibrilables, y le indica al que lo está utilizándolo como hacerlo"))
-        juegoVoFList.add(gameToF("El teléfono del sistema de emergencias médicas es el 147" , "FALSO: el teléfono del sistema de emergencias médicas es el 107 a nivel nacional. Puede ser que algunas localidades tengan uno diferente. El 911 es el número de emergencias general, en todo el país"))
+
+
+
+        var docRef = db.collection("verdaderofalso")
+        docRef.get()
+            .addOnSuccessListener { dataSnapshot ->
+                if (dataSnapshot != null) {
+                    var documents = dataSnapshot.documents
+                    for (snapshot in documents) {
+                        snapshot.toObject<gameToF>()?.let { juegoVoFList.add(it) }
+                    }
+                }
+                else {
+                    Log.d("Test", "No such document")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d("Test", "get failed with ", exception)
+            }
+
+
+
 
 
         btnSiguiente.setOnClickListener {
