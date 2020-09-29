@@ -7,8 +7,8 @@
     <fragment
         android:id="@+id/fragmentPerfil"
         android:name="com.example.proyectomaster.fragments.FragmentPerfil"
-        android:label="fragment_perfil"
-        tools:layout="@layout/fragment_perfil" >
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil">
         <action
             android:id="@+id/action_fragmentPerfil_to_fragmentSaberMas"
             app:destination="@id/fragmentSaberMas" />
@@ -25,8 +25,8 @@
     <fragment
         android:id="@+id/fragmentNoticias"
         android:name="com.example.proyectomaster.fragments.FragmentNoticias"
-        android:label="fragment_noticias"
-        tools:layout="@layout/fragment_noticias" >
+        android:label="Noticias"
+        tools:layout="@layout/fragment_noticias">
         <argument
             android:name="Titulo"
             app:argType="string" />
@@ -46,28 +46,28 @@
     <fragment
         android:id="@+id/fragmentContacto"
         android:name="com.example.proyectomaster.fragments.FragmentContacto"
-        android:label="fragment_contacto"
+        android:label="Contacto"
         tools:layout="@layout/fragment_contacto" />
     <fragment
         android:id="@+id/fragmentInstructivos"
         android:name="com.example.proyectomaster.fragments.FragmentInstructivos"
-        android:label="fragment_instructivos"
+        android:label="Instructivos"
         tools:layout="@layout/fragment_instructivos" />
     <fragment
         android:id="@+id/fragmentJuegos"
         android:name="com.example.proyectomaster.fragments.Juegos.FragmentJuegos"
-        android:label="fragment_juegos"
+        android:label="Juegos"
         tools:layout="@layout/fragment_juegos" />
     <fragment
         android:id="@+id/fragmentSaberMas"
         android:name="com.example.proyectomaster.fragments.FragmentSaberMas"
-        android:label="fragment_saber_mas"
+        android:label="Preguntas frecuentes"
         tools:layout="@layout/fragment_saber_mas" />
     <fragment
         android:id="@+id/listFragmentNoticias"
         android:name="com.example.proyectomaster.fragments.listFragmentNoticias"
-        android:label="fragment_list_noticias"
-        tools:layout="@layout/fragment_list_noticias" >
+        android:label="Noticias"
+        tools:layout="@layout/fragment_list_noticias">
         <action
             android:id="@+id/action_listFragmentNoticias2_to_fragmentNoticias"
             app:destination="@id/fragmentNoticias" />
@@ -75,7 +75,7 @@
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.example.proyectomaster.fragments.MapsFragment"
-        android:label="fragment_maps"
+        android:label="Mapa"
         tools:layout="@layout/fragment_maps" />
     <fragment
         android:id="@+id/juegoSecuencia"
