@@ -57,7 +57,6 @@ class JuegoVoF : Fragment() {
         juegoVoFList.add(gameToF("Cuanto más tarde se comienza con RCP básica, mejor es el pronóstico" , "FALSO: la RCP básica precoz tiene mejor pronóstico"))
 
 
-
         var docRef = db.collection("verdaderofalso")
         docRef.get()
             .addOnSuccessListener { dataSnapshot ->
@@ -77,12 +76,14 @@ class JuegoVoF : Fragment() {
 
 
 
-
-
         btnSiguiente.setOnClickListener {
 
             if (numeroDePregunta < juegoVoFList.size - 1){
                 numeroDePregunta = numeroDePregunta + 1
+                btnAnterior.visibility = View.VISIBLE
+            }
+            if (numeroDePregunta == juegoVoFList.size-1){
+                btnSiguiente.visibility = View.INVISIBLE
             }
 
             txtPregunta.text = juegoVoFList[numeroDePregunta].pregunta
@@ -94,13 +95,15 @@ class JuegoVoF : Fragment() {
                 }
             }
         }
-
-
 
         btnAnterior.setOnClickListener {
 
             if (numeroDePregunta > 0 ){
                 numeroDePregunta = numeroDePregunta - 1
+                btnSiguiente.visibility = View.VISIBLE
+            }
+            if (numeroDePregunta == 0){
+                btnAnterior.visibility = View.INVISIBLE
             }
 
             txtPregunta.text = juegoVoFList[numeroDePregunta].pregunta
@@ -113,7 +116,9 @@ class JuegoVoF : Fragment() {
             }
         }
 
-
+        if (numeroDePregunta == 0){
+            btnAnterior.visibility = View.INVISIBLE
+        }
 
         txtPregunta.text = juegoVoFList[0].pregunta
         radioGroup.setOnCheckedChangeListener { group, checkedId ->
@@ -121,8 +126,6 @@ class JuegoVoF : Fragment() {
                 txtRespuesta.text = juegoVoFList[0].respuesta
             }
         }
-
-
 
     }
 }
