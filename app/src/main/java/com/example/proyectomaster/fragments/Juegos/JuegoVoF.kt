@@ -118,6 +118,7 @@ class JuegoVoF : Fragment() {
 
         if (numeroDePregunta == 0){
             btnAnterior.visibility = View.INVISIBLE
+            btnSiguiente.visibility = View.VISIBLE
         }
 
         txtPregunta.text = juegoVoFList[0].pregunta
