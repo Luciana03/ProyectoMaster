@@ -24,6 +24,6 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#000000"
-        android:backgroundTint="#000000" />
+        android:background="#bb000b"
+        android:backgroundTint="#bb000b" />
 </LinearLayout>
