@@ -125,8 +125,6 @@ class listFragmentNoticias : Fragment() {
             .set(noticia1)
 
 
-
-
         var docRef = db.collection("noticias")
         docRef.get()
             .addOnSuccessListener { dataSnapshot ->
