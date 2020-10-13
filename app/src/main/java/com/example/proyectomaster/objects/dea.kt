@@ -1,9 +1,9 @@
 package com.example.proyectomaster.objects
 
-class dea (direccion: String?, nombreDelLugar: String?, telefono: String?, privado: String?, latitud: String?, longitud: String?, urlimage: String?) {
+class dea (direccion: String?, nombredellugar: String?, telefono: String?, privado: String?, latitud: String?, longitud: String?, urlimage: String?) {
 
     var direccion: String = ""
-    var nombreDelLugar: String = ""
+    var nombredellugar: String = ""
     var telefono: String = ""
     var privado: String = ""
     var latitud: String = ""
@@ -14,7 +14,7 @@ class dea (direccion: String?, nombreDelLugar: String?, telefono: String?, priva
 
     init {
         this.direccion = direccion!!
-        this.nombreDelLugar = nombreDelLugar!!
+        this.nombredellugar = nombredellugar!!
         this.telefono = telefono!!
         this.privado = privado!!
         this.latitud = latitud!!
