@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
+    val numeroDeEmergencia : Number = 107
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -112,7 +114,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun callPhone(){
-        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "107"))
+        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + numeroDeEmergencia))
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.CALL_PHONE
