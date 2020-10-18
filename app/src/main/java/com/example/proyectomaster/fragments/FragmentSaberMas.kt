@@ -20,5 +20,5 @@ class FragmentSaberMas : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_saber_mas, container, false)
     }
-
+//https://portal.alemana.cl/wps/wcm/connect/Internet/Home/medicos-y-especialidades/Cardiologia/preguntas-frecuentes
 }

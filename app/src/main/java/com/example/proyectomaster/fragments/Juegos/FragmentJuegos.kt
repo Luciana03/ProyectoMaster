@@ -42,8 +42,8 @@ class FragmentJuegos : Fragment() {
 
         TabLayoutMediator(tabLayout, viewPager, TabLayoutMediator.TabConfigurationStrategy { tab, position ->
             when (position) {
-                0 -> tab.text = "Secuencia"
-                else -> tab.text = "V o F"
+                0 -> tab.text = "V o F"
+                else -> tab.text = "Secuencia"
             }
         }).attach()
     }
@@ -53,8 +53,8 @@ class FragmentJuegos : Fragment() {
         override fun createFragment(position: Int): Fragment {
 
             return when(position){
-                0 -> JuegoSecuencia()
-                else -> JuegoVoF()
+                0 -> JuegoVoF()
+                else -> JuegoSecuencia()
             }
         }
 
