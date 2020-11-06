@@ -46,11 +46,20 @@ class FragmentContacto : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        txtAboutUs.text="       Sobre Nosotros\n" +  "- Dirección: Azcuénaga 980, CABA, Argentina\n" +
-                " - Teléfono:   011 4961-6520\n" +
-                " - Sitio Web: http://www.fundacioncardiologica.org/ \n" +
-                " - Correo: info@fundacioncardiologica.org\n" +
-                " - Más info: La Fundación Cardiológica Argentina es una entidad de bien público no gubernamental, sin fines de lucro que se encuentra constituida por profesionales de diferentes especialidades que trabajan en forma honoraria y conforman así el Comité Ejecutivo. Tiene presencia en todo el país por medio de los Distritos Regionales de la Sociedad Argentina de Cardiología. Esta afiliada a la Federación Mundial del Corazón (World Heart Federation) y a la Fundación Interamericana del Corazón (Interamerican Heart Foundation).\n" +
+        txtAboutUs.text="       Sobre Nosotros\n" +
+                "\n" +
+                "- Dirección: Azcuénaga 980, CABA, Argentina\n" +
+                "\n" +
+                "- Teléfono:   011 4961-6520\n" +
+                "\n" +
+                "- Sitio Web:\n" +
+                "http://www.fundacioncardiologica.org/ \n" +
+                "\n" +
+                "- Correo:\n" +
+                "info@fundacioncardiologica.org\n" +
+                "\n" +
+                "- Más info:\n" +
+                "La Fundación Cardiológica Argentina es una entidad de bien público no gubernamental, sin fines de lucro que se encuentra constituida por profesionales de diferentes especialidades que trabajan en forma honoraria y conforman así el Comité Ejecutivo. Tiene presencia en todo el país por medio de los Distritos Regionales de la Sociedad Argentina de Cardiología. Esta afiliada a la Federación Mundial del Corazón (World Heart Federation) y a la Fundación Interamericana del Corazón (Interamerican Heart Foundation).\n" +
                 "\n" +
                 "En este contexto desarrolla sus actividades que básicamente se dividen en 3 grandes áreas: Investigación, Comunidad y Educación."
 
