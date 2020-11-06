@@ -45,6 +45,7 @@
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
                 android:text="Text"
+                android:textColor="#CB000000"
                 android:textSize="18sp" />
 
             <View
@@ -79,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
+                android:textColor="#CB000000"
                 android:text="Text"
                 android:textSize="18sp" />
 
@@ -115,6 +117,7 @@
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
                 android:text="Text"
+                android:textColor="#CB000000"
                 android:textSize="18sp" />
 
             <View
@@ -149,6 +152,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
+                android:textColor="#CB000000"
                 android:text="Text"
                 android:textSize="18sp" />
 
@@ -184,6 +188,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
+                android:textColor="#CB000000"
                 android:text="Text"
                 android:textSize="18sp" />
 
@@ -219,6 +224,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
+                android:textColor="#CB000000"
                 android:text="Text"
                 android:textSize="18sp" />
 
@@ -254,6 +260,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
+                android:textColor="#CB000000"
                 android:text="Text"
                 android:textSize="18sp" />
 
@@ -289,6 +296,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
+                android:textColor="#CB000000"
                 android:text="Text"
                 android:textSize="20sp" />
 
