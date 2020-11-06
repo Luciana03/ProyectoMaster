@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="1) ¿Desde qué edad es bueno hacerse un chequeo cardiaco si hay antecedentes familiares?"
+                android:text="Text"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="Si hay antecedentes importantes en la familia, la idea es realizarse tempranamente (20 años) un chequeo de los factores de riesgo más importantes (presión arterial, niveles de azúcar y colesterol en la sangre), además de prevenir manteniendo una dieta saludable, realizando regularmente ejercicio y dejando de fumar."
+                android:text="Text"
                 android:textSize="18sp" />
 
             <View
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="2) ¿Qué exámenes específicos cardiacos hay que hacerse?"
+                android:text="Text"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="Se sugiere una evaluación médica con toma de presión arterial y examen físico, perfil lipídico, glicemia, test de esfuerzo y electrocardiograma."
+                android:text="Text"
                 android:textSize="18sp" />
 
             <View
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="3) ¿Cuáles son los síntomas que nos pueden avisar de una enfermedad cardiaca?"
+                android:text="Text"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="Inicialmente no hay síntomas sino factores de riesgo elevados, como hipertensión arterial (no controlada), colesterol alto, azúcar elevada en la sangre, sobrepeso, tabaquismo y sedentarismo. La idea es prevenir y nunca llegar a tener síntomas, ya que éstos implican que la enfermedad ya está consolidada."
+                android:text="Text"
                 android:textSize="18sp" />
 
             <View
@@ -139,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="4) ¿Las personas con diabetes y alteraciones a la tiroides tienen más posibilidad de padecer problemas al corazón?"
+                android:text="Text"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="Efectivamente, la diabetes aumenta considerablemente el riesgo de tener un evento cardiovascular. Con respecto a alteraciones en la glándula tiroides, no deberían haber problemas, siempre y cuando esté controlada con tratamiento."
+                android:text="Text"
                 android:textSize="18sp" />
 
             <View
@@ -174,7 +174,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="5) ¿Tomar todos los días ácido acetilsalicílico es mucho o poco?"
+                android:text="Text"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -184,7 +184,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="La aspirina está recomendada en prevención secundaria, cuando ya se ha tenido un evento cardiovascular, o en prevención primaria, cuando existe un riesgo alto de tenerlo. El resto de la población debe consultar con su médico antes de tomar un tratamiento como este."
+                android:text="Text"
                 android:textSize="18sp" />
 
             <View
@@ -209,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="6) ¿Tener taquicardias breves es señal de que algo anda mal?"
+                android:text="Text"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -219,7 +219,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="Las taquicardias son normales si se presentan como respuesta a dolor, estrés o actividad física, por ejemplo. Cuando una taquicardia aparece sin causa clara es preferible consultar a un cardiólogo."
+                android:text="Text"
                 android:textSize="18sp" />
 
             <View
@@ -244,7 +244,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="7) ¿Se puede viajar en avión con marcapasos?"
+                android:text="Text"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -254,7 +254,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="Sí, no hay problema en realizar un viaje en avión con marcapasos. Siempre es conveniente llevar una credencial que acredite que se tiene, para mostrarla en el paso por policía internacional."
+                android:text="Text"
                 android:textSize="18sp" />
 
             <View
@@ -279,7 +279,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="Importante:"
+                android:text="Text"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -289,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:justificationMode="inter_word"
-                android:text="Es fundamental una alimentación saludable, mantener un peso normal y realizar actividad física habitualmente. La idea es prevenir y nunca llegar a tener síntomas, ya que estos implican que la enfermedad ya está consolidada."
+                android:text="Text"
                 android:textSize="20sp" />
 
             <View
