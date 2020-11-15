@@ -11,6 +11,7 @@ import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     val numeroDeEmergencia : Number = 107
+    val PERMISSION_ID = 42
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,9 +50,14 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
         bottomNavigation.setupWithNavController(navController)
 
+        if (!checkPermissions()) {
+            requestPermissions()
+        } else {
+        }
 
 
-        checkPermission()
+
+        //checkPermission()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -74,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun checkPermission() {
+    /*fun checkPermission() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.CALL_PHONE)
             != PackageManager.PERMISSION_GRANTED) {
@@ -92,13 +100,13 @@ class MainActivity : AppCompatActivity() {
                     arrayOf(Manifest.permission.CALL_PHONE),
                     42)
             }
-        } /*else {  si descomento esto apenas abris la app llama directamente, despues de que cortas podes seguir usando la app normal
+        }*/ /*else {  si descomento esto apenas abris la app llama directamente, despues de que cortas podes seguir usando la app normal
             // Permission has already been granted
             callPhone()
-        }*/
-    }
+        }
+    }*/
 
-    override fun onRequestPermissionsResult(requestCode: Int,
+    /*override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>, grantResults: IntArray) {
         if (requestCode == 42) {
             // If request is cancelled, the result arrays are empty.
@@ -111,7 +119,7 @@ class MainActivity : AppCompatActivity() {
             }
             return
         }
-    }
+    }*/
 
     fun callPhone(){
         val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + numeroDeEmergencia))
@@ -124,5 +132,52 @@ class MainActivity : AppCompatActivity() {
             return
         }
         startActivity(intent)
+    }
+
+
+
+    private fun checkPermissions(): Boolean {
+        var permissionState = 0
+
+        val permissions = arrayOf(
+            Manifest.permission.INTERNET,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+        )
+
+        for (perm in permissions) {
+            permissionState = ActivityCompat.checkSelfPermission(this, perm)
+        }
+        return permissionState == PackageManager.PERMISSION_GRANTED
+    }
+
+
+    private fun requestPermissions() {
+        val permissions = arrayOf(
+            Manifest.permission.INTERNET,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CALL_PHONE
+        )
+
+        for (perm in permissions) {
+            ActivityCompat.shouldShowRequestPermissionRationale(this, perm)
+        }
+        startPermissionRequest(permissions)
+    }
+
+    private fun startPermissionRequest(perm: Array<String>) {
+        ActivityCompat.requestPermissions(this, perm, 0)
+    }
+
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        if (requestCode == PERMISSION_ID) {
+            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                //updateLocation()
+            }
+        }
     }
 }
