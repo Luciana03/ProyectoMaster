@@ -50,14 +50,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
         bottomNavigation.setupWithNavController(navController)
 
-        if (!checkPermissions()) {
-            requestPermissions()
-        } else {
-        }
-
-
-
-        //checkPermission()
+        checkPermission()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -76,13 +69,12 @@ class MainActivity : AppCompatActivity() {
         val id = when(item.itemId) {
 
             R.id.action_llamar -> callPhone()
-
             else -> ""
         }
         return super.onOptionsItemSelected(item)
     }
 
-    /*fun checkPermission() {
+    fun checkPermission() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.CALL_PHONE)
             != PackageManager.PERMISSION_GRANTED) {
@@ -98,17 +90,17 @@ class MainActivity : AppCompatActivity() {
                 // No explanation needed, we can request the permission.
                 ActivityCompat.requestPermissions(this,
                     arrayOf(Manifest.permission.CALL_PHONE),
-                    42)
+                    PERMISSION_ID)
             }
-        }*/ /*else {  si descomento esto apenas abris la app llama directamente, despues de que cortas podes seguir usando la app normal
+        } //else {  si descomento esto apenas abris la app llama directamente, despues de que cortas podes seguir usando la app normal
             // Permission has already been granted
-            callPhone()
-        }
-    }*/
+            //callPhone()
+        //}
+    }
 
-    /*override fun onRequestPermissionsResult(requestCode: Int,
+    override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>, grantResults: IntArray) {
-        if (requestCode == 42) {
+        if (requestCode == PERMISSION_ID) {
             // If request is cancelled, the result arrays are empty.
             if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                 // permission was granted, yay!
@@ -119,7 +111,7 @@ class MainActivity : AppCompatActivity() {
             }
             return
         }
-    }*/
+    }
 
     fun callPhone(){
         val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + numeroDeEmergencia))
@@ -128,56 +120,8 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.CALL_PHONE
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-
             return
         }
         startActivity(intent)
-    }
-
-
-
-    private fun checkPermissions(): Boolean {
-        var permissionState = 0
-
-        val permissions = arrayOf(
-            Manifest.permission.INTERNET,
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
-        )
-
-        for (perm in permissions) {
-            permissionState = ActivityCompat.checkSelfPermission(this, perm)
-        }
-        return permissionState == PackageManager.PERMISSION_GRANTED
-    }
-
-
-    private fun requestPermissions() {
-        val permissions = arrayOf(
-            Manifest.permission.INTERNET,
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.CALL_PHONE
-        )
-
-        for (perm in permissions) {
-            ActivityCompat.shouldShowRequestPermissionRationale(this, perm)
-        }
-        startPermissionRequest(permissions)
-    }
-
-    private fun startPermissionRequest(perm: Array<String>) {
-        ActivityCompat.requestPermissions(this, perm, 0)
-    }
-
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
-        if (requestCode == PERMISSION_ID) {
-            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                //updateLocation()
-            }
-        }
     }
 }

@@ -50,7 +50,7 @@ class MapsFragment : Fragment() {
         map.getUiSettings().setZoomControlsEnabled(true) //para que puedas modificar el zoom
 
         val ORT = LatLng(-34.6100019,-58.4293771) //les puse nombres cualquiea para los marcadores
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(ORT, 12.0f))
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(ORT, 13.0f))
 
         var docRef = db.collection("deas")
         docRef.get()
